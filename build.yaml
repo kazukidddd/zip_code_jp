@@ -1,0 +1,14 @@
+targets:
+  zip_code_jp:
+    builders:
+      postal_code_builder:
+        enabled: true
+
+builders:
+  postal_code_builder:
+    import: "package:zip_code_jp/builders/postal_code_builder.dart"
+    builder_factories: ["PostalCodeBuilder"]
+    build_extensions: {".dummy": [".postal_code.dart"]}
+    auto_apply: root_package
+    build_to: source
+    applies_builders: []
